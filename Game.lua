@@ -88,7 +88,7 @@ room("exit cave", room_cmd)
 --Outside Of Cave
 room_cmd2 = {
 inspect = "You are at the base of a hill. There is a path.", 
-follow = function()
+follow_path = function()
 print("You follow the path.")
 print("A goblin appears wielding a gun.")
 print("What do you do? (run away, attack, nothing, random gibberish)")
@@ -122,13 +122,13 @@ else
 print("There is a gate.")
 end
 end,
-grab = function()
+grab_key = function()
 have_key = true
 print("You grabbed a Thick Key.")
 print("Added Thick Key to Inventory.")
 add_inv("Thick Key")
 end,
-open = function()
+open_gate = function()
 if have_key == false then
 print("The gate is locked.")
 elseif have_key == true then
@@ -136,7 +136,7 @@ print("You unlock the gate and leave. The key is destroyed. Good job. The key ha
 remove_inv("Thick Key")
 end
 end,
-grabm = function()
+grab_magic_wand = function()
 add_inv("Magic Wand")
 print("You run outside, trying to combat the werecats, flailing your arms very girly with your female hands screaming the Harry Potter spell,'Peeus Hypeus!'")
 end
@@ -154,7 +154,7 @@ if input == "exit" then
 print("Goodbye!")
 io.read()
 os.exit()
-elseif input ~= "exit" then
+else input ~= "exit" then
 print("Please type 'exit' to leave.")
 end
 end
