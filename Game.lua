@@ -163,7 +163,7 @@ if input == "exit" then
 print("Goodbye!")
 io.read()
 os.exit()
-elseif input ~= "exit" then
+else
 print("Please type 'exit' to leave.")
 end
 end
