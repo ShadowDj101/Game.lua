@@ -30,6 +30,8 @@ print("help - shows help")
 io.read()
 print("inspect - search area")
 io.read()
+print("inv - open inventory")
+io.read()
 print("exit____ - leaves area")
 io.read()
 print("follow ____ - get on bridge/path or follow someone")
@@ -105,7 +107,7 @@ print("Added Goblin Armor to Inventory.")
 add_inv("Goblin Armor")
 room_exit = true
 elseif fightinput == "run away" then
-print("You coward. You run but get shot, causing you to stagger and lose the coin.You get away.")
+print("You coward. You run but get shot in the knee, causing you to stagger and lose the coin. You get away. You are no longer and adventurer.")
 remove_inv("Un-Readable Coin")
 room_exit = true
 else
